@@ -1,0 +1,39 @@
+.card{
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+    margin-bottom: 5em;
+    background-color: black;
+    border: 2px solid wheat;
+    box-shadow: 5px 10px 8px #888888;
+    
+}
+
+.img{
+    width:300px;
+    height: 250px;
+    margin-top: 10px;
+    transform: translate(10px,0);
+}
+.MovieList{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    margin-top: 10%;
+}
+.movieProfile{
+    color: wheat;
+    padding: 2px 1.2em;
+    margin-top: 7px;
+}
+.description{
+    height: 180px;
+}
+
+/* Nav*/
+.nav{
+    margin-top: 10% ;
+    height: 500px;
+    border: 10px solid turquoise;
+}
