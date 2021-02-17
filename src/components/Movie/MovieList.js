@@ -27,10 +27,11 @@ return (
            movie.rating>=rating
          )
          .map(movie => 
-           <MovieCard movie={movie} key={movie.id} addMovie={addMovie}/>    
+           <MovieCard movie={movie} key={movie.id}  movieCard={true}/>    
            )
          }
-         <AddMovie addMovie={addMovie}/>
+         <MovieCard movieCard={false} addMovie={addMovie}/>
+         
        </div>
 )
         }

@@ -1,5 +1,7 @@
 import React,{ useState} from 'react'
-import {Modal,Button,Form} from 'react-bootstrap'
+import {Modal,Button,Form} from 'react-bootstrap' 
+import './AddMovie'
+
 
 function AddMovie({addMovie}) {
     const [show, setShow] = useState(false);
@@ -13,9 +15,9 @@ function AddMovie({addMovie}) {
     const handleShow = () => setShow(true);
   
     return (
-      <>
-        <span variant="primary" onClick={handleShow}>
-        [ +dlssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss ] 
+      <div>
+        <span className="addMovie" variant="primary" onClick={handleShow}>
+        [ + ] 
         </span>
   
         <Modal show={show} onHide={handleClose}>
@@ -40,12 +42,12 @@ function AddMovie({addMovie}) {
             <Button variant="secondary" onClick={handleClose}>
               Close
             </Button>
-            <Button variant="primary" onClick={()=>addMovie({id:Math.random(),name,image,type,date,stars,description})}>
-              Save Changes
+            <Button variant="primary" onClick={()=>addMovie({id:Math.random(),name,image,type,date, rating:stars ,description})}>
+              Add movie
             </Button>
           </Modal.Footer>
         </Modal>
-      </>
+      </div>
     );
   }
   

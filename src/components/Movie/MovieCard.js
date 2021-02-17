@@ -1,14 +1,18 @@
 import React from 'react'
 import Rating from '@material-ui/lab/Rating';
 import Box from '@material-ui/core/Box';
+import AddMovie from '../Addmovie/AddMovie';
 
 
 
-const MovieCard = ({movie,addMovie}) => {
+const MovieCard = ({movie,addMovie,movieCard}) => {
     return (
-        <div className='card'>
-            
-              
+
+
+   
+        <div >
+      { movieCard ?
+            <div className='card'>
                     <img className='img' src={movie.image} alt={movie.id}/>
                     <br/>
                     <span className='movieProfile'>{movie.name}</span>
@@ -24,8 +28,18 @@ const MovieCard = ({movie,addMovie}) => {
                   </Box>
                   }
                   </span>
-                    
+                  </div>
+                  
+                 
+                 :
+                 <div className='cardAdd'>
+                     <AddMovie addMovie={addMovie}/>
+                      </div>
+                  
+}
         </div>
+        
+                
     )
 }
 

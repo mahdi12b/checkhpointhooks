@@ -5,6 +5,7 @@ import  SearchByName  from "../searchByName/SearchByName";
 import SearchByRating from '../SearchByRating/SearchByRating.js'
 import{ MoviesData }from './MoviesData.js'
 import MovieList from '../Movie/MovieList.js'
+import Footer from '../Footer/Footer.js'
 import './App.css';
 const Movies =() => {
 
@@ -27,6 +28,7 @@ const addMovie = (newMovie) => {
       <SearchByRating className='searchByRating' setRating={setRating}/>
       </div>
       <MovieList  moviesData={moviesData} search={search}  rating={rating} addMovie={addMovie}  />
+      <Footer/>
     </div>
   );
 }
