@@ -19,7 +19,7 @@ const MovieList = ({moviesData,search,rating,addMovie}) => {
 
   
 return (
-       <div className='MovieList'>
+       <div className='container MovieList'>
          {moviesData
          .filter(movie=>
            movie.name.toLowerCase().includes(search.toLowerCase())

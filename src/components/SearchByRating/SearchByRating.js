@@ -10,6 +10,7 @@ export default function SearchByRating({setRating,rating}) {
     <div>
       <Box className='rating' mb={3} >
         <Rating 
+        tranparent
           name="simple-controlled"
           value={rating}
           onChange={(event, newValue) => {

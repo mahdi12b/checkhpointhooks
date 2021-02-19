@@ -1,11 +1,9 @@
 
 import React,{useState} from 'react'
-import Navbar from '../Navbar/Navbar.js'
 import  SearchByName  from "../searchByName/SearchByName";
 import SearchByRating from '../SearchByRating/SearchByRating.js'
 import{ MoviesData }from './MoviesData.js'
 import MovieList from '../Movie/MovieList.js'
-import Footer from '../Footer/Footer.js'
 import './App.css';
 const Movies =() => {
 
@@ -13,7 +11,7 @@ const Movies =() => {
 
 const [moviesData , setMoviesData] = useState(MoviesData)
 const [search , setSearch] = useState('');
-const [rating , setRating] = useState(1);
+const [rating , setRating] = useState(3);
 
 const addMovie = (newMovie) => {
    setMoviesData([...moviesData, newMovie])
@@ -22,13 +20,12 @@ const addMovie = (newMovie) => {
 
   return (
     <div className="Movie">
-      <Navbar  />
+      
       <div className='search'>
       <SearchByName className='searchByName' setSearch={setSearch}/>
       <SearchByRating className='searchByRating' setRating={setRating}/>
       </div>
       <MovieList  moviesData={moviesData} search={search}  rating={rating} addMovie={addMovie}  />
-      <Footer/>
     </div>
   );
 }

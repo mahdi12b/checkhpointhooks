@@ -16,7 +16,7 @@ function AddMovie({addMovie}) {
   
     return (
       <div>
-        <span className="addMovie" variant="primary" onClick={handleShow}>
+        <span className="addMovie" onClick={handleShow}>
         [ + ] 
         </span>
   
@@ -34,7 +34,7 @@ function AddMovie({addMovie}) {
     <Form.Label>Date</Form.Label>
     <Form.Control type="Number" placeholder="Date" min='1960' max='2021' onChange={(e)=>setDate(e.target.value)}  />
     <Form.Label>Stars</Form.Label>
-    <Form.Control type="number" placeholder="Number of stars" min='1' max='5' onChange={(e)=>setStars(e.target.value)}/>
+    <Form.Control type="number" placeholder="Number of stars" min={1} max={5} onChange={(e)=>setStars(e.target.value)}/>
     <Form.Label>Description</Form.Label>
     <Form.Control type="text" placeholder="Description" onChange={(e)=>setDescription(e.target.value)} />
           </Modal.Body>

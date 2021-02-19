@@ -2,6 +2,7 @@ import React from 'react'
 import Rating from '@material-ui/lab/Rating';
 import Box from '@material-ui/core/Box';
 import AddMovie from '../Addmovie/AddMovie';
+import { Link } from 'react-router-dom';
 
 
 
@@ -12,6 +13,7 @@ const MovieCard = ({movie,addMovie,movieCard}) => {
    
         <div >
       { movieCard ?
+      <Link to={{pathname:'/movieDescription', state:{movie:movie}}}>
             <div className='card'>
                     <img className='img' src={movie.image} alt={movie.id}/>
                     <br/>
@@ -21,7 +23,6 @@ const MovieCard = ({movie,addMovie,movieCard}) => {
                     
                     <span className='movieProfile'>{movie.type}</span>
                 
-                    <span className='movieProfile description'>{movie.description}</span>
                     <span className='movieProfile'>{
                      <Box component="fieldset" mb={3} borderColor="transparent">
                    <Rating name="read-only" value={movie.rating} readOnly />
@@ -29,6 +30,7 @@ const MovieCard = ({movie,addMovie,movieCard}) => {
                   }
                   </span>
                   </div>
+      </Link>
                   
                  
                  :
